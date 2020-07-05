@@ -1,0 +1,56 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Mango People T-shirt",
+    "price": 51.00,
+    "image": "../../../assets/product__1.png",
+    "small_image": "../../../assets/product__1.png",
+    "big_image": "../../../assets/product__1.png",
+    "color": "Red",
+    "size": "M",
+    "material": "COTTON",
+    "designer": "BINBURHAN",
+    "collection": "WOMEN COLLECTION",
+    "description": "Moschino Cheap And Chic",
+    "full_description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals."
+  },
+  {
+    "id_product": 2,
+    "product_name": "Mango People T-shirt2",
+    "price": 52.00,
+    "image": "../../../assets/product__2.png",
+    "color": "Blue",
+    "size": "XS",
+    "material": "WOOL",
+    "designer": "BINBURHAN",
+    "collection": "WOMEN COLLECTION",
+    "description": "Moschino Cheap And Chic",
+    "full_description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals."
+  },
+  {
+    "id_product": 3,
+    "product_name": "Mango People T-shirt3",
+    "price": 53.00,
+    "image": "../../../assets/product__3.png",
+    "color": "White",
+    "size": "XL",
+    "material": "SILK",
+    "designer": "BINBURHAN",
+    "collection": "WOMEN COLLECTION",
+    "description": "Moschino Cheap And Chic",
+    "full_description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals."
+  },
+  {
+    "id_product": 4,
+    "product_name": "Mango People T-shirt4",
+    "price": 54.00,
+    "image": "../../../assets/product__4.png",
+    "color": "Black",
+    "size": "XXL",
+    "material": "VISCOSE",
+    "designer": "BINBURHAN",
+    "collection": "WOMEN COLLECTION",
+    "description": "Moschino Cheap And Chic",
+    "full_description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals."
+  }
+]
