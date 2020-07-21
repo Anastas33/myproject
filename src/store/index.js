@@ -89,6 +89,6 @@ export default new Vuex.Store({
       return state.cartItems;
     },
   },
-  modules: {
-  },
+  // modules: {
+  // },
 });
