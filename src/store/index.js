@@ -89,6 +89,5 @@ export default new Vuex.Store({
       return state.cartItems;
     },
   },
-  // modules: {
-  // },
+  // для коммита
 });
