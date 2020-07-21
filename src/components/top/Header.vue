@@ -26,7 +26,7 @@
         </details>
         <label>
           <input class="header__search" type="text" placeholder="Search for Item..."
-                 v-model="userSearch" @submit.prevent="filterProducts(userSearch)">
+                 v-model="userSearch" @submit="filterProducts(userSearch)">
         </label>
         <router-link to="/products">
           <button class="search__button" @click="filterProducts(userSearch)">
@@ -66,7 +66,7 @@ export default {
     logo,
     cartBox,
   },
-  mounted() {
+  beforeMount() {
     this.fetchProducts();
     this.filterProducts();
   },

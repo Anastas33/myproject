@@ -3,40 +3,16 @@
     "id_product": 1,
     "product_name": "Mango People T-shirt",
     "price": 51.00,
-    "image": "../../../assets/product__1.png",
-    "smallImage": "../../../assets/product__1.png",
+    "image": "https://raw.githubusercontent.com/Anastas33/Homework/master/img/product__1.png",
+    "small_image": "https://placehold.it/50x100",
+    "big_image": "https://placehold.it/597x724",
     "color": "Red",
-    "size": "Xll",
+    "size": "M",
+    "material": "COTTON",
+    "designer": "BINBURHAN",
+    "collection": "WOMEN COLLECTION",
+    "description": "Moschino Cheap And Chic",
+    "full_description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
     "quantity": 1
-  },
-  {
-    "id_product": 2,
-    "product_name": "Mango People T-shirt2",
-    "price": 52.00,
-    "image": "../../../assets/product__2.png",
-    "smallImage": "../../../assets/product__1.png",
-    "color": "Red",
-    "size": "Xll",
-    "quantity": 2
-  },
-  {
-    "id_product": 3,
-    "product_name": "Mango People T-shirt3",
-    "price": 53.00,
-    "image": "../../../assets/product__3.png",
-    "smallImage": "../../../assets/product__1.png",
-    "color": "Red",
-    "size": "Xll",
-    "quantity": 3
-  },
-  {
-    "id_product": 4,
-    "product_name": "Mango People T-shirt4",
-    "price": 54.00,
-    "image": "../../../assets/product__4.png",
-    "smallImage": "../../../assets/product__1.png",
-    "color": "Red",
-    "size": "Xll",
-    "quantity": 4
   }
 ]

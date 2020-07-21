@@ -49,170 +49,72 @@ export default new Vuex.Store({
       commit('FILTER_PRODUCTS', data);
     },
     fetchProducts({ commit }) {
-      fetch('https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json')
+      fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/productItems.json')
         .then((result) => result.json())
         .then((data) => {
           commit('SET_PRODUCTS', data);
-          console.log(data);
         })
         .catch((error) => {
           console.log(error);
         });
-      // commit('SET_PRODUCTS', [
-      //   {
-      //     id_product: 1,
-      //     product_name: 'Mango People T-shirt',
-      //     price: 51.00,
-      //     image: '../assets/product__9.png',
-      //     small_image: 'https://placehold.it/50x100',
-      //     big_image: 'https://placehold.it/597x724',
-      //     color: 'Red',
-      //     size: 'M',
-      //     material: 'COTTON',
-      //     designer: 'BINBURHAN',
-      //     collection: 'WOMEN COLLECTION',
-      //     description: 'Moschino Cheap And Chic',
-      //     full_description: `Compellingly actualize fully researched processes before proactive
-      //       + outsourcing. Progressively syndicate collaborative architectures before
-      //       + cutting-edge services. Completely visualize parallel core competencies rather
-      //       + than exceptional portals.`,
-      //   },
-      //   {
-      //     id_product: 2,
-      //     product_name: 'Mango People T-shirt2',
-      //     price: 52.00,
-      //     image: 'https://placehold.it/200x150',
-      //     small_image: 'https://placehold.it/50x100',
-      //     big_image: 'https://placehold.it/597x724',
-      //     color: 'Blue',
-      //     size: 'XS',
-      //     material: 'WOOL',
-      //     designer: 'BINBURHAN',
-      //     collection: 'WOMEN COLLECTION',
-      //     description: 'Moschino Cheap And Chic',
-      //     full_description: `Compellingly actualize fully researched processes before proactive
-      //       + outsourcing. Progressively syndicate collaborative architectures before
-      //       + cutting-edge services. Completely visualize parallel core competencies rather
-      //       + than exceptional portals.`,
-      //   },
-      //   {
-      //     id_product: 3,
-      //     product_name: 'Mango People T-shirt3',
-      //     price: 53.00,
-      //     image: 'https://placehold.it/200x150',
-      //     small_image: 'https://placehold.it/50x100',
-      //     big_image: 'https://placehold.it/597x724',
-      //     color: 'White',
-      //     size: 'XL',
-      //     material: 'SILK',
-      //     designer: 'BINBURHAN',
-      //     collection: 'WOMEN COLLECTION',
-      //     description: 'Moschino Cheap And Chic',
-      //     full_description: `Compellingly actualize fully researched processes before proactive
-      //       + outsourcing. Progressively syndicate collaborative architectures before
-      //       + cutting-edge services. Completely visualize parallel core competencies rather
-      //       + than exceptional portals.`,
-      //   },
-      //   {
-      //     id_product: 4,
-      //     product_name: 'Mango People T-shirt4',
-      //     price: 54.00,
-      //     image: 'https://placehold.it/200x150',
-      //     small_image: 'https://placehold.it/50x100',
-      //     big_image: 'https://placehold.it/597x724',
-      //     color: 'Black',
-      //     size: 'XXL',
-      //     material: 'VISCOSE',
-      //     designer: 'BINBURHAN',
-      //     collection: 'WOMEN COLLECTION',
-      //     description: 'Moschino Cheap And Chic',
-      //     full_description: `Compellingly actualize fully researched processes before proactive
-      //       + outsourcing. Progressively syndicate collaborative architectures before
-      //       + cutting-edge services. Completely visualize parallel core competencies rather
-      //       + than exceptional portals.`,
-      //   },
-      // ]);
     },
     addToCart({ commit }, data) {
       commit('ADD_TO_CART', data);
+      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
+      //   method: 'PUT',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((result) => result.json())
+      //   .then((json) => {
+      //     console.log(json);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
     },
     deleteFromCart({ commit }, data) {
       commit('DELETE_FROM_CART', data);
+      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
+      //   method: 'DELETE',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((result) => result.json())
+      //   .then((json) => {
+      //     console.log(json);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
     },
-    deleteFromCartAll({ commit }) {
-      commit('DELETE_FROM_CART_ALL');
+    deleteFromCartAll(context) {
+      context.commit('DELETE_FROM_CART_ALL');
+      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
+      //   method: 'DELETE',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(context.cartItems),
+      // })
+      //   .then((result) => result.json())
+      //   .then((json) => {
+      //     console.log(json);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
     },
     fetchCartItems({ commit }) {
-    //   const response = await fetch('');
-    //   return response.json;
-    //   fetch('../db/cartItems.json')
-    //     .then((result) => result.json())
-    //     .then((data) => {
-    //       commit('SET_CART_ITEMS', {
-    //         id_product: 2,
-    //         product_name: 'Mango People T-shirt2',
-    //         price: 52.00,
-    //         image: 'https://placehold.it/200x150',
-    //         color: 'Red',
-    //         size: 'Xll',
-    //         quantity: 3,
-    //       });
-    //       console.log(data);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-      setTimeout(() => {
-        commit('SET_CART_ITEMS', [{
-          id_product: 2,
-          product_name: 'Mango People T-shirt2',
-          price: 52.00,
-          image: 'https://placehold.it/200x150',
-          smallImage: 'https://placehold.it/50x100',
-          color: 'Red',
-          size: 'Xll',
-          quantity: 3,
-        }]);
-      }, 4500);
-    },
-    getJson(url) {
-      return fetch(url)
+      fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json')
         .then((result) => result.json())
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    postJson(url, data) {
-      return fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      }).then((result) => result.json())
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    putJson(url, data) {
-      return fetch(url, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      }).then((result) => result.json())
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    deleteJson(url) {
-      return fetch(url, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }).then((result) => result.json())
+        .then((data) => {
+          commit('SET_CART_ITEMS', data);
+        })
         .catch((error) => {
           console.log(error);
         });

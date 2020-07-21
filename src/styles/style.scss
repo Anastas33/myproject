@@ -76,6 +76,10 @@ input:focus, button:focus, summary:focus {
   outline: none;
 }
 
+.checkbox {
+  margin-right: 3px;
+}
+
 button:active {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.17);
 }

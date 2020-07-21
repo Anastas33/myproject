@@ -114,33 +114,10 @@
             <div class="topFilter__block">
               <h4 class="topFilter__block__h4">Size</h4>
               <form action="#" class="topFilter__checkbox">
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="XXS" id="checkbox__XXS">
-                  <label for="checkbox__XXS">XXS</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="XS" id="checkbox__XS">
-                  <label for="checkbox__XS">XS</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="S" id="checkbox__S">
-                  <label for="checkbox__S">S</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="M" id="checkbox__M">
-                  <label for="checkbox__M">M</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="L" id="checkbox__L">
-                  <label for="checkbox__L">L</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="XL" id="checkbox__XL">
-                  <label for="checkbox__XL">XL</label>
-                </p>
-                <p class="topFilter__checkbox__p">
-                  <input type="checkbox" value="XXL" id="checkbox__XXL">
-                  <label for="checkbox__XXL">XXL</label>
+                <p class="topFilter__checkbox__p" v-for="size of sizes" :key="size">
+                  <input class="checkbox" type="checkbox" :value="size" :id="size"
+                         v-model="checkedSizes">
+                  <label :for="size">{{ size }}</label>
                 </p>
               </form>
             </div>
@@ -201,6 +178,12 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Products',
+  data() {
+    return {
+      sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL'],
+      checkedSizes: [],
+    };
+  },
   components: {
     productItem,
     breadcrumb,
@@ -212,12 +195,14 @@ export default {
   methods: {
     ...mapActions(['fetchProducts']),
     ...mapActions(['filterProducts']),
+    scroll() {
+      window.scrollTo(0, 0);
+    },
   },
   mounted() {
-
+    this.scroll();
   },
   beforeMount() {
-    this.fetchProducts();
     this.filterProducts();
   },
 };

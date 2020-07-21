@@ -58,7 +58,6 @@ export default {
     cartItem,
   },
   methods: {
-    ...mapActions(['fetchCartItems']),
     ...mapActions(['deleteFromCartAll']),
   },
   computed: {
@@ -66,14 +65,6 @@ export default {
       return this.getCartItems.reduce((sum, good) => sum + (good.price * good.quantity), 0);
     },
     ...mapGetters(['getCartItems']),
-  },
-  mounted() {
-    this.fetchCartItems()
-      .then((data) => {
-        if (data) {
-          console.log(123);
-        }
-      });
   },
 };
 </script>

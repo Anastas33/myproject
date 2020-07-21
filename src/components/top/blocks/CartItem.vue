@@ -1,7 +1,8 @@
 <template>
   <tr>
     <td class="table__td">
-      <a href="#"><img class="table__img" :src="cartItem.image" :alt="cartItem.id_product"></a>
+      <router-link :to="linkOpen"><img class="table__img" :src="cartItem.image"
+                                       :alt="cartItem.id_product"></router-link>
       <a class="table__prod__name" href="#">{{ cartItem.product_name }}</a>
       <p class="table__prod__desc">Color: <span class="table__prod__span">
         {{ cartItem.color }}</span> <br>
@@ -28,6 +29,11 @@ export default {
   props: ['cartItem'],
   components: {
     buttonDeleteFromCart,
+  },
+  computed: {
+    linkOpen() {
+      return `/product/${this.cartItem.id_product}`;
+    },
   },
 };
 </script>
