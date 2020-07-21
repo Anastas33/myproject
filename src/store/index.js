@@ -60,54 +60,12 @@ export default new Vuex.Store({
     },
     addToCart({ commit }, data) {
       commit('ADD_TO_CART', data);
-      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
-      //   method: 'PUT',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(data),
-      // })
-      //   .then((result) => result.json())
-      //   .then((json) => {
-      //     console.log(json);
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   });
     },
     deleteFromCart({ commit }, data) {
       commit('DELETE_FROM_CART', data);
-      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
-      //   method: 'DELETE',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(data),
-      // })
-      //   .then((result) => result.json())
-      //   .then((json) => {
-      //     console.log(json);
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   });
     },
     deleteFromCartAll(context) {
       context.commit('DELETE_FROM_CART_ALL');
-      // fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json', {
-      //   method: 'DELETE',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(context.cartItems),
-      // })
-      //   .then((result) => result.json())
-      //   .then((json) => {
-      //     console.log(json);
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      //   });
     },
     fetchCartItems({ commit }) {
       fetch('https://raw.githubusercontent.com/Anastas33/Homework/homework6/db/cartItems.json')
